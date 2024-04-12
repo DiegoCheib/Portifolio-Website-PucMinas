@@ -98,6 +98,7 @@ body {
                     padding: 1rem;
                     text-align: justify;
                     font-size: 22px;
+                    border-bottom: 1px solid var(--border-color)
                 }
                 #linguagens{
                     padding: 0.5rem;
@@ -219,3 +220,164 @@ body {
     }
 }
 
+footer{
+    border-top: 1px solid var(--border-color);
+    padding: 1rem;
+    #footer-container{
+        #footer{
+            p{
+                color: var(--font-color);
+                margin-bottom: 0;
+            }
+            #social-links{
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                flex-direction: column;
+                a{
+                    text-decoration: none;
+                    color: var(--font-color);
+                    transition: all 0.3s ease-in-out;
+                    i{
+                        font-size: 29px;
+                    }
+                    &:hover{
+                        opacity: 0.8;
+                        transform: translate(2px, -5px);
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1025px) {
+    .header-container{
+        #mid-items{
+            justify-content: flex-start !important;
+            margin-top: 0;
+            h2{
+                display: flex;
+            }
+            p{
+                img{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    #perfil-container{
+        #perfil{
+            flex-direction: column;
+            #informacoes-pessoais-container{
+                h2{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .header-container{
+        #mid-items{
+            justify-content: flex-start !important;
+            margin-top: 0;
+            h2{
+                display: flex;
+            }
+            p{
+                img{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    #perfil-container{
+        #perfil{
+            flex-direction: column;
+            #informacoes-pessoais-container{
+                h2{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                #linguagens{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    .container-projetos{
+        h2{
+            font-size: 32px;
+            margin-bottom: 2rem;
+        }
+        .projetos{
+            gap: 1.5rem;
+        }
+    }
+
+    .container-contribuidores{
+        .contribuidores {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr) ;
+            gap: 20px;
+          }
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .header-container{
+        #mid-items{
+            margin-top: 0;
+            h2{
+                display: none
+            }
+            p{
+                margin-left: 0.5rem;
+                width: 100%;
+                padding: 1rem;
+                img{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    #perfil-container{
+        #perfil{
+            flex-direction: column;
+            #informacoes-pessoais-container{
+                h2{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    .container-projetos{
+        h2{
+            margin-bottom: 1.5rem;
+            font-size: 32px;
+        }
+        .projetos{
+            gap: 3rem;
+        }
+    }
+    .container-contribuidores{
+        h2{
+            display: flex;
+            justify-content: center;
+        }
+        .contribuidores{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    
+}

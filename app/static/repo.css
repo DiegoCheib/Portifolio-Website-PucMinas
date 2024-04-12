@@ -120,17 +120,24 @@ body {
         .desc {
             padding: 1.5rem;
             border-bottom: 2px solid var(--border-color);
-
             h2 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 color: var(--font-color);
-                font-size: 28px;
                 padding-bottom: 1.5rem;
+                font-size: 28px;
+                .github-info{
+                    display: flex;
+                    padding: 0.5rem;
+
+                }
             }
 
             p {
                 color: var(--font-color);
                 font-size: 20px;
-                padding: 1.5rem;
+                padding:  0 1.5rem 1.5rem 1.5rem;
                 text-align: justify;
             }
         }
@@ -187,6 +194,7 @@ body {
             border-radius: 8px;
             border: 1px solid var(--border-color);
             transition: all 0.3s ease;
+            margin: 20px;
 
             a {
                 text-decoration: none;
@@ -199,6 +207,83 @@ body {
             &:hover {
                 opacity: 0.7;
                 transform: scale(1.1);
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1366px) {
+    .header-container{
+        #mid-items{
+            justify-content: flex-start;
+            padding: 1.5rem;
+            margin-top: 0;
+            h2{
+                display: block;
+            }
+            p{
+                img{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .header-container{
+        #mid-items{
+            justify-content: flex-start;
+            padding: 1.5rem;
+            margin-top: 0;
+            h2{
+                display: block;
+            }
+            p{
+                img{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 767px) {
+    .header-container{
+        #mid-items{
+            justify-content: flex-start;
+            padding: 1.5rem;
+            margin-top: 0;
+            h2{
+                display: none;
+            }
+            p{
+                img{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    .repo-container{
+        .desc{
+            h2{
+                padding-bottom: 0;
+                .github-info{
+                    p{
+                        padding: 0.8rem;
+                    }
+                }
+            }
+        }
+        .linguagem{
+            padding: 1rem;
+            .especificacoes{
+                flex-direction: column;
+                ul{
+                    margin: 0;
+                    li{
+                        img{
+                            width: 50px;
+                        }
+                    }
+                }
             }
         }
     }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Repositório Intelecttus</title>
     <link rel="stylesheet" href="../static/repo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">    
 </head>
 <header class="header-container">
     <div id="mid-items">
@@ -21,14 +22,20 @@
 
 <body>
     <div class="repo-titulo">
-        <h2>Repositório: Emails-Trigger</h2>
+        <h2>Repositório: Emails-Trigger
+        </h2>
         <button onclick=window.history.back()>
             Voltar
         </button>
     </div>
     <div class="repo-container">
         <div class="desc">
-            <h2>Descrição</h2>
+            <h2>Descrição
+                <div class="github-info">
+                    <p><i class="fa-regular fa-star"></i>  : <span id="estrelas"></span></p>
+                    <p><i class="fa-solid fa-user"></i>  : <span id="contribuidores"></span></p>
+                </div>
+            </h2>
             <p> Emails Triggler é uma aplicação criado para envio de emails automático para um banco de dados pré-existente de clientes, com o intuito de manter um contato mais próximo com os clientes e aumentar a fidelidade dos mesmos.
             </p>
         </div>
@@ -46,10 +53,24 @@
                 </button>
             </div>
         </div>
-
     </div>
-
-
 </body>
-
 </html>
+<script>
+    let estrela_count;
+let contribuidores_count;
+
+fetch('https://api.github.com/repos/diegocheib/emails-trigger')
+    .then(response => response.json())
+    .then(data => {
+        estrela_count = data.stargazers_count;
+        document.getElementById('estrelas').textContent = estrela_count;
+    });
+
+fetch('https://api.github.com/repos/diegocheib/emails-trigger/contributors')
+    .then(response => response.json())
+    .then(data => {
+        contribuidores_count = data.length;
+        document.getElementById('contribuidores').textContent = contribuidores_count;
+    });
+</script>

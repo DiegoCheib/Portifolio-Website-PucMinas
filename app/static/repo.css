@@ -90,10 +90,29 @@ body {
     .repo-titulo {
         padding: 1.5rem;
         border-bottom: 2px solid var(--border-color);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
         h2 {
             color: var(--font-color);
             font-size: 28px;
+        }
+        button {
+            margin: 20px;
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--font-color);
+            font-size: 20px;
+            transition: 0.4s;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.7;
+                transform: scale(1.1);
+            }
         }
     }
 
@@ -101,17 +120,24 @@ body {
         .desc {
             padding: 1.5rem;
             border-bottom: 2px solid var(--border-color);
-
             h2 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 color: var(--font-color);
-                font-size: 28px;
                 padding-bottom: 1.5rem;
+                font-size: 28px;
+                .github-info{
+                    display: flex;
+                    padding: 0.5rem;
+
+                }
             }
 
             p {
                 color: var(--font-color);
                 font-size: 20px;
-                padding: 1.5rem;
+                padding:  0 1.5rem 1.5rem 1.5rem;
                 text-align: justify;
             }
         }
@@ -133,28 +159,42 @@ body {
         h2 {
             color: var(--font-color);
         }
-
-        ul {
+        .especificacoes{
             display: flex;
-            margin: 2rem;
-
-            li {
-                list-style: none;
-                color: var(--font-color);
-
-                img {
-                    padding: 0.5rem;
-                    height: 60px;
-                    width: 60px;
+            justify-content: space-between;
+            align-items: center;
+            ul {
+                display: flex;
+                margin: 2rem;
+                li {
+                    list-style: none;
+                    color: var(--font-color);
+                    img {
+                        padding: 0.5rem;
+                        height: 60px;
+                        width: 60px;
+                    }
+                    h2{
+                        padding: 0.5rem;
+                        .fa-user{
+                            color: gray;
+                            font-size: 32px;
+                        }
+                        .fa-star{
+                            color: rgb(200, 200, 20);
+                            font-size: 32px;
+                            
+                        }
+                    }
                 }
-            }
+            }   
         }
-
         .link-git {
             padding: 8px;
             border-radius: 8px;
             border: 1px solid var(--border-color);
             transition: all 0.3s ease;
+            margin: 20px;
 
             a {
                 text-decoration: none;
@@ -167,6 +207,83 @@ body {
             &:hover {
                 opacity: 0.7;
                 transform: scale(1.1);
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1366px) {
+    .header-container{
+        #mid-items{
+            justify-content: flex-start;
+            padding: 1.5rem;
+            margin-top: 0;
+            h2{
+                display: block;
+            }
+            p{
+                img{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .header-container{
+        #mid-items{
+            justify-content: flex-start;
+            padding: 1.5rem;
+            margin-top: 0;
+            h2{
+                display: block;
+            }
+            p{
+                img{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 767px) {
+    .header-container{
+        #mid-items{
+            justify-content: flex-start;
+            padding: 1.5rem;
+            margin-top: 0;
+            h2{
+                display: none;
+            }
+            p{
+                img{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    .repo-container{
+        .desc{
+            h2{
+                padding-bottom: 0;
+                .github-info{
+                    p{
+                        padding: 0.8rem;
+                    }
+                }
+            }
+        }
+        .linguagem{
+            padding: 1rem;
+            .especificacoes{
+                flex-direction: column;
+                ul{
+                    margin: 0;
+                    li{
+                        img{
+                            width: 50px;
+                        }
+                    }
+                }
             }
         }
     }

@@ -98,7 +98,7 @@ body {
                     padding: 1rem;
                     text-align: justify;
                     font-size: 22px;
-                    border-bottom: 1px solid var(--border-color);
+                    border-bottom: 1px solid var(--border-color)
                 }
                 #linguagens{
                     padding: 0.5rem;

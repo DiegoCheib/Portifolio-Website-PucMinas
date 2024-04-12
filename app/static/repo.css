@@ -90,10 +90,29 @@ body {
     .repo-titulo {
         padding: 1.5rem;
         border-bottom: 2px solid var(--border-color);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
         h2 {
             color: var(--font-color);
             font-size: 28px;
+        }
+        button {
+            margin: 20px;
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--font-color);
+            font-size: 20px;
+            transition: 0.4s;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.7;
+                transform: scale(1.1);
+            }
         }
     }
 
@@ -133,23 +152,36 @@ body {
         h2 {
             color: var(--font-color);
         }
-
-        ul {
+        .especificacoes{
             display: flex;
-            margin: 2rem;
-
-            li {
-                list-style: none;
-                color: var(--font-color);
-
-                img {
-                    padding: 0.5rem;
-                    height: 60px;
-                    width: 60px;
+            justify-content: space-between;
+            align-items: center;
+            ul {
+                display: flex;
+                margin: 2rem;
+                li {
+                    list-style: none;
+                    color: var(--font-color);
+                    img {
+                        padding: 0.5rem;
+                        height: 60px;
+                        width: 60px;
+                    }
+                    h2{
+                        padding: 0.5rem;
+                        .fa-user{
+                            color: gray;
+                            font-size: 32px;
+                        }
+                        .fa-star{
+                            color: rgb(200, 200, 20);
+                            font-size: 32px;
+                            
+                        }
+                    }
                 }
-            }
+            }   
         }
-
         .link-git {
             padding: 8px;
             border-radius: 8px;
